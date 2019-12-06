@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TesteMdiatr_01.Infra;
 
 namespace TestMediatr_01
 {
@@ -26,6 +27,8 @@ namespace TestMediatr_01
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddSingleton<ICustomerRepository, CustomerRepository>();
 
             services.AddMediatR(typeof(Startup));
         }

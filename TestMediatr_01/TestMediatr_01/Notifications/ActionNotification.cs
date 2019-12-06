@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace TesteMdiatr_01.Notifications
 {
-    public class ActionNotification
+    public enum ActionNotification
     {
+        Criado = 1,
+        Atualizado = 2,
+        Excluido = 3
     }
 }
